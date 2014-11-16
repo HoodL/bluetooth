@@ -21,6 +21,8 @@
 		CBADCAB119CAF98C00AAADF7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBADCA9319CAF98C00AAADF7 /* UIKit.framework */; };
 		CBADCAB919CAF98C00AAADF7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBADCAB719CAF98C00AAADF7 /* InfoPlist.strings */; };
 		CBADCABB19CAF98C00AAADF7 /* bluetoothTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBADCABA19CAF98C00AAADF7 /* bluetoothTests.m */; };
+		CBADCAC519CAFD9D00AAADF7 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBADCAC419CAFD9D00AAADF7 /* CoreBluetooth.framework */; };
+		CBADCAC819CB1EBD00AAADF7 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CBADCAC719CB1EBD00AAADF7 /* TableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,9 @@
 		CBADCAB619CAF98C00AAADF7 /* bluetoothTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bluetoothTests-Info.plist"; sourceTree = "<group>"; };
 		CBADCAB819CAF98C00AAADF7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CBADCABA19CAF98C00AAADF7 /* bluetoothTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bluetoothTests.m; sourceTree = "<group>"; };
+		CBADCAC419CAFD9D00AAADF7 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		CBADCAC619CB1EBD00AAADF7 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		CBADCAC719CB1EBD00AAADF7 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBADCAC519CAFD9D00AAADF7 /* CoreBluetooth.framework in Frameworks */,
 				CBADCA9219CAF98C00AAADF7 /* CoreGraphics.framework in Frameworks */,
 				CBADCA9419CAF98C00AAADF7 /* UIKit.framework in Frameworks */,
 				CBADCA9019CAF98C00AAADF7 /* Foundation.framework in Frameworks */,
@@ -101,6 +107,7 @@
 		CBADCA8E19CAF98C00AAADF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CBADCAC419CAFD9D00AAADF7 /* CoreBluetooth.framework */,
 				CBADCA8F19CAF98C00AAADF7 /* Foundation.framework */,
 				CBADCA9119CAF98C00AAADF7 /* CoreGraphics.framework */,
 				CBADCA9319CAF98C00AAADF7 /* UIKit.framework */,
@@ -117,6 +124,8 @@
 				CBADCAA119CAF98C00AAADF7 /* Main.storyboard */,
 				CBADCAA419CAF98C00AAADF7 /* ViewController.h */,
 				CBADCAA519CAF98C00AAADF7 /* ViewController.m */,
+				CBADCAC619CB1EBD00AAADF7 /* TableViewCell.h */,
+				CBADCAC719CB1EBD00AAADF7 /* TableViewCell.m */,
 				CBADCAA719CAF98C00AAADF7 /* Images.xcassets */,
 				CBADCA9619CAF98C00AAADF7 /* Supporting Files */,
 			);
@@ -199,6 +208,9 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "___FULLUSERNAME___";
 				TargetAttributes = {
+					CBADCA8B19CAF98C00AAADF7 = {
+						DevelopmentTeam = RBX4G483RU;
+					};
 					CBADCAAC19CAF98C00AAADF7 = {
 						TestTargetID = CBADCA8B19CAF98C00AAADF7;
 					};
@@ -250,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBADCAA619CAF98C00AAADF7 /* ViewController.m in Sources */,
+				CBADCAC819CB1EBD00AAADF7 /* TableViewCell.m in Sources */,
 				CBADCAA019CAF98C00AAADF7 /* AppDelegate.m in Sources */,
 				CBADCA9C19CAF98C00AAADF7 /* main.m in Sources */,
 			);
@@ -376,10 +389,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bluetooth/bluetooth-Prefix.pch";
 				INFOPLIST_FILE = "bluetooth/bluetooth-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -389,10 +405,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "bluetooth/bluetooth-Prefix.pch";
 				INFOPLIST_FILE = "bluetooth/bluetooth-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -456,6 +475,7 @@
 				CBADCAC019CAF98C00AAADF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBADCAC119CAF98C00AAADF7 /* Build configuration list for PBXNativeTarget "bluetoothTests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +484,7 @@
 				CBADCAC319CAF98C00AAADF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
